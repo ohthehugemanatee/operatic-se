@@ -20,6 +20,7 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
+		<script src="js/vimeo.ga.min.js"></script>
 		<script src="js/init.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -57,7 +58,7 @@
                 <div class="content dark style2">
                     <div class="container">
                         <div class='embed-container'>
-                            <iframe src='https://player.vimeo.com/video/120569251' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+													<iframe src='https://player.vimeo.com/video/120569251?api=1&player_id=vimeo-player-1' id="vimeo-player-1" data-progress="true" data-seek="true" data-bounce="true" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                         </div>
                     <h2>Watch the trailer</h2>
                     </div>
@@ -245,6 +246,17 @@
         ga('require', 'linker');
         ga('linker:autolink', ['operatic.de']);
         ga('send', 'pageview');
+
+				ga('send', 'event', 'Vimeo', 'Started video', 'https://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Paused video', 'https://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Resumed video', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Completed video', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Skipped video forward or backward', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+
+				ga('send', 'event', 'Vimeo', 'Played video: 25%', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Played video: 50%', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Played video: 75%', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+
 
       </script>
 	</body>
